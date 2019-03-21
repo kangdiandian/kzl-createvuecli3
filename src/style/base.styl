@@ -1,0 +1,23 @@
+// 在normal基础上在进行重置样式
+@import './normalize';
+
+#app,
+html,
+body {
+  position: absolute 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+body {
+  margin: 0;
+  color: $color-body;
+  font-size: 16px;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: $color-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: -apple-system-font, "PingFang SC", "Helvetica Neue", 'Avenir', Helvetica, Arial, sans-serif;
+}

@@ -1,13 +1,29 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view />
+    <Layout></Layout>
   </div>
 </template>
+<script>
+import Layout from '@/layout/Layout';
+export default {
+  name: 'app',
+  components: {
+    Layout,
+  },
+};
+</script>
+
 <style lang="stylus">
+@import './style/index';
+.layout-base,
+.router-container {
+  position: absolute 0 0 0 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
 #app
   font-family 'Avenir', Helvetica, Arial, sans-serif
   -webkit-font-smoothing antialiased

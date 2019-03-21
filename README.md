@@ -1,5 +1,9 @@
 # trade-admin-vue
-
+1.基于vue-cli3创建项目
+2.基于axios封装请求 3.基于eslint进行代码检查
+4.基于normalize.css进行css样式初始化
+5.基于stylelint对css进行代码检查
+6.vue-router history模式封装路由
 ## Project setup
 ```
 yarn install
