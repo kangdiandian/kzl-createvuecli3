@@ -5,6 +5,7 @@ import store from './store';
 import mini from '@/utils/mini';
 import { sync } from 'vuex-router-sync';
 import './plugins/element.js';
+import './utils/rem';
 
 Vue.config.productionTip = false;
 

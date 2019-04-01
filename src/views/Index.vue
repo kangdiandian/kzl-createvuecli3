@@ -2,18 +2,20 @@
   <div class="page-index" @click="goHome()">
     <div id="scroll_div" class="fl">
       <div id="scroll_begin">
-      恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-      恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-      恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
+        恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span>
       </div>
       <div id="scroll_end">
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
-        恭喜793765***获得 <span class="pad_right">50元巨人点卡奖励</span>
+        恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span> 恭喜793765***获得
+        <span class="pad_right">50元巨人点卡奖励</span>
       </div>
     </div>
   </div>
@@ -36,8 +38,7 @@ export default {
     // this.ScrollImgLeft();
     this.goHome();
   },
-  mounted() {
-  },
+  mounted() {},
   methods: {
     ...mapActions(['setPageTitle']),
     goHome() {
@@ -51,43 +52,43 @@ export default {
       );
       // this.$forward('home');
     },
-    ScrollImgLeft(){
+    ScrollImgLeft() {
       const that = this;
-      var speed=50;
+      var speed = 50;
       this.$nextTick(() => {
         this.scrollBegin = this.$el.querySelector('#scroll_begin');
         this.scrollEnd = this.$el.querySelector('#scroll_end');
         this.scrollDiv = this.$el.querySelector('#scroll_div');
-        this.scrollEnd.innerHTML=this.scrollBegin.innerHTML;
-        function Marquee(){
-          if(that.scrollEnd.offsetWidth-that.scrollDiv.scrollLeft<=0){
-            that.scrollDiv.scrollLeft-=that.scrollEnd.offsetWidth;
+        this.scrollEnd.innerHTML = this.scrollBegin.innerHTML;
+        const Marquee = () => {
+          if (that.scrollEnd.offsetWidth - that.scrollDiv.scrollLeft <= 0) {
+            that.scrollDiv.scrollLeft -= that.scrollEnd.offsetWidth;
           } else {
             that.scrollDiv.scrollLeft++;
           }
           console.log(that.scrollDiv.scrollLeft);
-        }
-        speed = parseInt(15 * 1000 / this.scrollEnd.offsetWidth);
-        this.intervalId = setInterval(Marquee,speed);
-
+        };
+        speed = parseInt((15 * 1000) / this.scrollEnd.offsetWidth);
+        this.intervalId = setInterval(Marquee, speed);
       });
-    // var scroll_begin = document.getElementById("scroll_begin");
-    // var scroll_end = document.getElementById("scroll_end");
-    // var scroll_div = document.getElementById("scroll_div");
-    //   scroll_div.onmouseover = function(){
-    // 　　　　　　　clearInterval(MyMar);
-    // 　　　　　}
-    //  　　　　scroll_div.onmouseout = function(){
-    // 　　　　　　　MyMar = setInterval(Marquee,speed); 　　　　
-    // 　　　　　}
+      // var scroll_begin = document.getElementById("scroll_begin");
+      // var scroll_end = document.getElementById("scroll_end");
+      // var scroll_div = document.getElementById("scroll_div");
+      // this.scrollDiv.onmouseover = function() {
+      //   clearInterval(MyMar);
+      // };
+      // this.scrollDiv.onmouseout = function() {
+      //   MyMar = setInterval(Marquee, speed);
+      // };
     },
   },
 };
 </script>
 <style lang="stylus" scoped>
 .page-index {
-  width: 100%;
-  height: 100%;
+  width: 30px;
+  height: 30px;
+  background: red;
 }
 .pad_right{ padding-right:2em;}
 #scroll_div {height:26px;overflow: hidden;white-space: nowrap;width:500px;margin-left:10px;}
