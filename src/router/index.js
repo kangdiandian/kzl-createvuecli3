@@ -18,6 +18,7 @@ export default new Router({
       path: '/',
       alias: '/index',
       name: 'index',
+      meta: { title: '首页' },
       component: Index,
     },
     {
