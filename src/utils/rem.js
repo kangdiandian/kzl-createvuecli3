@@ -12,5 +12,5 @@
   };
   if (!doc.addEventListener) return;
   win.addEventListener(resizeEvent, recale, false);
-  doc.addEventListener(resizeEvent, recale, false);
+  doc.addEventListener('DOMContentLoaded', recale, false);
 })(document, window);

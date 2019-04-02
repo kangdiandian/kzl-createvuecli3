@@ -36,7 +36,15 @@ export default {
   computed: {},
   created() {
     // this.ScrollImgLeft();
-    this.goHome();
+    // this.goHome();
+    // this.queryString();
+    // assign方法加载新的文档
+    // window.location.assign('home');
+    // window.location.reload();
+    // replace方法用新的文档替换当前文档，不会在浏览器历史记录中生成一条新纪录
+    // window.location.replace('home');
+    // console.log(window.navigator.userAgent);
+    // window.history.go('home');
   },
   mounted() {},
   methods: {
@@ -81,13 +89,25 @@ export default {
       //   MyMar = setInterval(Marquee, speed);
       // };
     },
+    // 解析location中search属性
+    queryString() {
+      const { search = '' } = window.location;
+      const qs = search.length > 0 ? search.substring(1) : '';
+      const arr1 = qs.split('&');
+      let args = {};
+      for (let i = 0; i < arr1.length; i++) {
+        const arr2 = arr1[i].split('=');
+        args[decodeURIComponent(arr2[0])] = decodeURIComponent(arr2[1]);
+      }
+      return args;
+    },
   },
 };
 </script>
 <style lang="stylus" scoped>
 .page-index {
-  width: 30px;
-  height: 30px;
+  width: 300px;
+  height: 300px;
   background: red;
 }
 .pad_right{ padding-right:2em;}
