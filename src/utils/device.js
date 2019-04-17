@@ -97,6 +97,7 @@ if (safari && (osx || os.ios || win)) {
 if (webview) browser.webview = true;
 host.version = browser.version;
 
+// 平板电脑
 os.tablet = !!(
   ipad ||
   playbook ||
