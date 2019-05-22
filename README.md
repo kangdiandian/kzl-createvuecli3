@@ -36,3 +36,18 @@ yarn run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### 增加commit之前的钩子
+在package.json中增加
+gitHooks git钩子
+"gitHooks": {
+  "pre-commit": "lint-staged"
+},
+要执行的服务
+"lint-staged": {
+  "*.{js,vue}": [
+    "vue-cli-service lint",
+    "git add"
+  ]
+},
