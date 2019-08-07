@@ -10,6 +10,14 @@ body {
   overflow: hidden;
   z-index: 1;
 }
+.page-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  z-index: 1;
+}
 body {
   margin: 0;
   color: $color-body;
@@ -20,4 +28,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: -apple-system-font, "PingFang SC", "Helvetica Neue", 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.view-scroll {
+  // 滚动不流畅，此属性可以恢复弹性滚动 http://efe.baidu.com/blog/mobile-fixed-layout
+  // 允许独立的滚动区域和触摸回弹
+  // NOTE：可能影响 Safari qq 上 header 没了
+  -webkit-overflow-scrolling: touch;
 }
