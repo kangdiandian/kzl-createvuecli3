@@ -5,6 +5,7 @@ let reqHeaders = {};
 
 export const modelApis = {
   getConfig: '/open/common/appconfig',
+  articleList: '/open/article/articlelist',
 };
 export const commonParams = {
   init(data) {

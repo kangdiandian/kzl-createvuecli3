@@ -2,7 +2,7 @@
   <div class="page-list">
     <div class="list-scroll">
       <div class="list-box">
-        <vue-scroll>
+        <vue-scroll @onScrollToLower="onScrollToLower">
           <div class="content" v-for="(item, index) in list" :key="index">
             {{ item.name }}
           </div>
@@ -51,6 +51,11 @@ export default {
   mounted() {
     // this.scroller =
   },
+  methods: {
+    onScrollToLower() {
+      console.log('到达底部了!');
+    },
+  },
 };
 </script>
 
@@ -62,7 +67,6 @@ export default {
 }
 .list-scroll{
   position: relative;
-  width: 200px;
 }
 .list-box {
   width: 100%;

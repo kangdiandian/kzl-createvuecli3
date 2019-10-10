@@ -33,3 +33,7 @@ export function debounce(func, wait, immediate) {
     return result;
   };
 }
+
+export function clone(obj = '') {
+  return obj ? JSON.parse(JSON.stringify(obj)) : obj;
+}

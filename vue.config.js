@@ -7,5 +7,13 @@ module.exports = {
   },
   devServer: {
     port: 8089,
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
   },
+  css: {
+    sourceMap: true, // 生产环境为false
+  },
+  lintOnSave: true, // 生产环境为false
 };

@@ -1,7 +1,11 @@
 module.exports = {
   root: true,
+  parserOptions: {
+    parser: 'babel-eslint',
+  },
   env: {
     node: true,
+    browser: true,
   },
   extends: ['plugin:vue/essential', '@vue/prettier'],
   rules: {
@@ -104,8 +108,5 @@ module.exports = {
     //   "allowTemplateLiterals": true,
     // }],
     'require-yield': [1],
-  },
-  parserOptions: {
-    parser: 'babel-eslint',
   },
 };

@@ -39,6 +39,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
 ### 增加commit之前的钩子
+```
+yarn add lint-staged
+```
 在package.json中增加
 gitHooks git钩子
 "gitHooks": {

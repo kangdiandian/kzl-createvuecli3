@@ -6,6 +6,7 @@ import mini from '@/utils/mini';
 import { sync } from 'vuex-router-sync';
 import './plugins/element.js';
 import './utils/rem';
+import './plugins/directive';
 
 Vue.config.productionTip = false;
 
